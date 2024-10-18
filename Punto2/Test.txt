@@ -1,0 +1,9 @@
+MAP(square, (1, 2, 3, 4));
+MAP(increment, (5, 10, 15));
+MAP(double, (2, 4, 6, 8));
+
+FILTER(is_greater_than, (10, 20, 30), 15);
+FILTER(is_less_than, (5, 15, 25, 35), 20);
+FILTER(is_multiple_of, (10, 15, 20, 25, 30), 5);
+FILTER(is_divisible_by, (1, 2, 4), 8);
+FILTER(greater_than_length, ("cat", "elephant", "dog"), 3);
