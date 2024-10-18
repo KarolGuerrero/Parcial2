@@ -1,6 +1,5 @@
 grammar Laplace;
 
-// Reglas para la entrada de funciones
 start : expr EOF ;
 
 expr
@@ -25,77 +24,63 @@ function
     | modifiedBesselFunction          // Función de Bessel modificada
     ;
 
-// Función exponencial: e^(-a*t)
+
 expFunction
-    : 'e' '^' '(' '-' param '*' 't' ')'   // Decaimiento exponencial
+    : 'e' '^' '(' '-' param '*' 't' ')' 
     ;
 
-// Función escalón unitario u(t)
 unitStepFunction
-    : 'u' '(' 't' ')'                     // Escalón unitario
+    : 'u' '(' 't' ')'                   
     ;
 
-// Función escalón unitario con retardo u(t - r)
 delayedUnitStepFunction
-    : 'u' '(' 't' '-' param ')'           // Escalón unitario con retardo
+    : 'u' '(' 't' '-' param ')' 
     ;
 
-// Función delta de Dirac δ(t)
 deltaFunction
-    : 'δ' '(' 't' ')'                     // Delta de Dirac
+    : 'δ' '(' 't' ')'                   
     ;
 
-// Función delta de Dirac con retardo δ(t - r)
 delayedDeltaFunction
-    : 'δ' '(' 't' '-' param ')'           // Delta de Dirac con retardo
+    : 'δ' '(' 't' '-' param ')'           
     ;
 
-// Potencia t^n
 powFunction
-    : 't' '^' INT                         // Potencia t^n
+    : 't' '^' INT                         
     ;
 
-// Potencia generalizada t^q
 qPowFunction
-    : 't' '^' param                       // Potencia generalizada t^q
+    : 't' '^' param                      
     ;
 
-// Función seno sin(ωt)
 sineFunction
-    : 'sin' '(' param '*' 't' ')'         // Seno
+    : 'sin' '(' param '*' 't' ')'       
     ;
 
-// Función coseno cos(ωt)
 cosineFunction
-    : 'cos' '(' param '*' 't' ')'         // Coseno
+    : 'cos' '(' param '*' 't' ')'         
     ;
 
-// Función seno hiperbólico sinh(at)
 sinhFunction
-    : 'sinh' '(' param '*' 't' ')'        // Seno hiperbólico
+    : 'sinh' '(' param '*' 't' ')'       
     ;
 
-// Función coseno hiperbólico cosh(at)
 coshFunction
-    : 'cosh' '(' param '*' 't' ')'        // Coseno hiperbólico
+    : 'cosh' '(' param '*' 't' ')'        
     ;
 
-// Función logarítmica log(t/t0)
 logFunction
-    : 'log' '(' 't' '/' param ')'         // Logaritmo natural
+    : 'log' '(' 't' '/' param ')'        
     ;
 
-// Función de Bessel Jn(ωt)
 besselFunction
-    : 'Jn' '(' param '*' 't' ')'          // Función de Bessel
+    : 'Jn' '(' param '*' 't' ')'         
     ;
 
-// Función de Bessel modificada
 modifiedBesselFunction
-    : 'I' param '(' param '*' 't' ')'     // Función de Bessel modificada
+    : 'I' param '(' param '*' 't' ')'    
     ;
 
-// Parámetros para las funciones (números y constantes)
 param : INT | FLOAT ;
 
 LAPLACE: 'L' ; // La transformada de Laplace

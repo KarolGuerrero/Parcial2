@@ -31,7 +31,7 @@ Este programa es un intérprete de transformadas de Laplace que permite calcular
 ## Archivos del Proyecto
 
 - `Laplace.g4`: Archivo de gramática ANTLR que define la sintaxis para las transformadas de Laplace.
-- `LaplaceEvalVisitor.py`: Implementación del Visitor que evalúa las transformadas de Laplace.
+- `Visitor.py`: Implementación del Visitor que evalúa las transformadas de Laplace.
 - `Laplace.py`: Script ejecutable que inicia el intérprete y gestiona la entrada del usuario.
 - Archivos generados por ANTLR: `LaplaceLexer.py`, `LaplaceParser.py`, `LaplaceVisitor.py`, `LaplaceLexer.interp`, `LaplaceParser.interp`, `LaplaceLexer.tokens`, `LaplaceParser.tokens`, `LaplaceListener.py`.
 
