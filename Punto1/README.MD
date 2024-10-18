@@ -31,11 +31,8 @@ Este proyecto es una calculadora de fracciones que permite realizar operaciones 
    antlr4 -Dlanguage=Python3 Racionales.g4
    ```
 
-   Asegúrate de que el archivo RacionalesVisitor.py se genere. Si no se genera, ejecuta el siguiente comando:
+    Asegurate de poner **-visitor** para que se genere el visitor que antlr da junto con los otros archivos.
 
-   ```bash
-    antlr4 -Dlanguage=Python3 -visitor Racionales.g4
-   ```
 
 2. **Ejecutar la calculadora:**
     Asegúrate de tener Python instalado y luego ejecuta el programa con el siguiente comando:

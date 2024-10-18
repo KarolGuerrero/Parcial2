@@ -1,0 +1,13 @@
+L(e^(-2*t))
+L(u(t))
+L(u(t-3))
+L(δ(t))
+L(δ(t-4))
+L(t^3)
+L(sin(2*t))
+L(cos(3*t))
+L(sinh(5*t))
+L(cosh(7*t))
+L(Jn(2*t))
+
+
